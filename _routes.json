@@ -1,0 +1,18 @@
+ {
+    "version": 1,
+    "include": [
+      "/*"
+    ],
+    "exclude": [
+      "/*.png",
+      "/*.svg",
+      "/*.webp",
+      "/*.ico",
+      "/*.txt",
+      "/*.jpg",
+      "/*.jpeg",
+      "/public/**",
+      "/build/**",  
+      "/_next/static/*" 
+    ]
+  }
