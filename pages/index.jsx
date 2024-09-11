@@ -198,7 +198,7 @@ export default function Home() {
       <article>
 
 
-        <div className='max-w-[1100px] mx-auto md:flex md:gap-[80px] mt-8 text-white justify-center  bg-black border border-[#1e1e1e]'>
+        <div className='max-w-[1100px] mx-auto md:flex rounded-md md:gap-[80px] bg-[#f2f0f0] mt-8 justify-center text-[black] border border-[#c0bdbd]'>
 
           <div className='md:w-[400px] md:pt-0 pt-6'>
             <img className='md:w-[300px] sm:w-[250px] w-[200px] md:mx-0 mx-auto' src={`${DOMAIN}/cover.webp`} alt="Operation True Love Cover" />
@@ -229,80 +229,8 @@ export default function Home() {
 
           </div>
 
-
-
-
         </div>
 
-
-
-
-
-
-
-
-        {/* <div className="flex justify-center">
-          <img src={`${COVER_IMG}`} alt="" />
-        </div>
-
-        <h1 className="text-center font-extrabold text-4xl my-5 uppercase">{MANGA_NAME}</h1>
-        <div className="flex justify-center">
-          <p className="my-5 leading-[2] px-6 text-center" dangerouslySetInnerHTML={{ __html: MANGA_DESCRIPTION }} />
-        </div> */}
-
-        {/* <div className="md:flex md:mb-[60px] mb-5 pt-3 relative bg-[black]">
-          <div className="absolute inset-0 bg-cover bg-no-repeat bg-center" style={{ backgroundImage: `url(${BEHIND_COVER_IMG})`, opacity: '0.25' }}></div>
-
-          <div className="pt-3 md:w-2/5">
-            <img className="mx-auto md:mx-0" width={450} height={450} src={`${COVER_IMG}`} alt="Manga Cover" />
-          </div>
-
-          <div className="md:w-3/5 md:mr-10  text-white p-5 relative z-10">
-            <h1 className="text-center font-extrabold text-4xl my-5 uppercase">{MANGA_NAME}</h1>
-            <p className="my-5 leading-[2] px-6 text-center" dangerouslySetInnerHTML={{ __html: MANGA_DESCRIPTION }} />
-
-            <div className="flex flex-wrap justify-center gap-2 px-4">
-              {genres.map((genre, index) => (
-                <button key={index} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                  {genre}
-                </button>
-              ))}
-            </div>
-
-            <div className="grid md:grid-cols-3 grid-cols-2 justify-center gap-x-10 mt-5 px-3">
-              <div className="text-center mt-10">
-                <h3 className="font-bold text-[21px] mb-2">Release</h3>
-                <p>{MANGA_RELEASE}</p>
-              </div>
-              <div className="text-center mt-10">
-                <h3 className="font-bold text-[21px] mb-2">Status</h3>
-                <p>{MANGA_STATUS}</p>
-              </div>
-              <div className="text-center mt-10">
-                <h3 className="font-bold text-[21px] mb-2">Author</h3>
-                <p>{MANGA_AUTHOR}</p>
-              </div>
-              <div className="text-center mt-10">
-                <h3 className="font-bold text-[21px] mb-2">Type</h3>
-                <p>Mahwa</p>
-              </div>
-              <div className="text-center mt-10">
-                <h3 className="font-bold text-[21px] mb-2">Artist</h3>
-                <p>{MANGA_ARTIST}</p>
-              </div>
-              <div className="text-center mt-10">
-                <h3 className="font-bold text-[21px] mb-2">Studio</h3>
-                <p>{MANGA_STUDIO}</p>
-              </div>
-            </div>
-
-            <div className="flex justify-center mt-10 pb-5">
-              <button className="bg-blue-500 hover:scale-110 active:scale-95 transition-transform text-white font-bold py-2 px-4 rounded">
-                <a href="#readmanga">READ NOW</a>
-              </button>
-            </div>
-          </div>
-        </div> */}
 
 
 
@@ -311,7 +239,7 @@ export default function Home() {
         <h2 id="readmanga" className="font-extrabold text-3xl my-10 px-4 text-center">
           <Link href={DOMAIN} className="hover:underline">{`Read ${MANGA_NAME} `}</Link>
         </h2>
-
+        {/* 
         <div className="mt-10 max-w-[1100px] mb-10 mx-auto px-5 flex flex-wrap justify-center">
 
           {chapters.map((chapter) => (
@@ -319,14 +247,39 @@ export default function Home() {
               <a
                 // onClick={handleRedirect}
                 href={chapter.url} className="p-5 hover:underline">
-                <p className="w-[300px] text-center p-5 border border-l-8 border-[black] font-bold break-words">
+                <p className="w-[300px] text-center p-5 border bg-[#f2f0f0] border-[#969393] rounded-md font-bold break-words">
                   {`${MANGA_NAME}, Chapter ${chapter.number}`}
                 </p>
               </a>
             </div>
           ))}
 
+        </div> */}
+
+
+
+
+        <div className='mx-6'>
+          <div className=" mt-10 py-3 bg-[#f2f0f0]  border border-[#9f9d9d] rounded max-w-[900px] mb-10 mx-auto px-3 flex flex-wrap justify-center max-h-[400px] overflow-y-scroll sm:gap-5 gap-3">
+
+            {chapters?.map((chapter, index) => (
+              <div className="flex hover:scale-105 active:scale-95 transition-transform my-1" key={index}>
+                <Link prefetch={false} href={chapter.url} className="sm:p-5 p-2  hover:underline text-[black] bg-[whitesmoke]  border border-[#6b6969] rounded sm:w-[180px] w-[100px]">
+                  <p className="sm:text-[14px] text-[12px] tracking-wider font-semibold">{`Chapter ${chapter.number}`}</p>
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
+
+
+
+
+
+
+
+
+
 
 
 
