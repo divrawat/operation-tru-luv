@@ -264,7 +264,10 @@ export default function Home() {
 
             {chapters?.map((chapter, index) => (
               <div className="flex hover:scale-105 active:scale-95 transition-transform my-1" key={index}>
-                <Link prefetch={false} href={chapter.url} className="sm:p-5 p-2  hover:underline text-[black] bg-[whitesmoke]  border border-[#6b6969] rounded sm:w-[180px] w-[100px]">
+                <Link
+
+                  onClick={handleRedirect}
+                  prefetch={false} href={chapter.url} className="sm:p-5 p-2  hover:underline text-[black] bg-[whitesmoke]  border border-[#6b6969] rounded sm:w-[180px] w-[100px]">
                   <p className="sm:text-[14px] text-[12px] tracking-wider font-semibold">{`Chapter ${chapter.number}`}</p>
                 </Link>
               </div>
